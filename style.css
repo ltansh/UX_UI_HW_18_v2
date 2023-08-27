@@ -1,0 +1,239 @@
+body {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    background-color: #FAFBF1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #212121;
+    display: grid;
+    grid-template-rows: 10% 20% 20% 45% 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "nav nav nav"
+    "intro intro intro"
+    "skills skills skills"
+    "work work work"
+    "footer footer footer";
+    margin: auto 0;
+}
+
+section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Navigation Bar Content */
+
+nav {
+    grid-area: nav;
+    margin: auto 80px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "img tabs tabs";
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+nav img {
+    grid-area: img;
+    width: 362px;
+    height: auto;
+    border-bottom: solid 1px #212121;
+    padding-bottom: 20px;
+    margin-right: 60px;
+}
+
+.tabs {
+    grid-area: tabs;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 1px #212121;
+    padding-bottom: 20px;
+    margin-right: 20px;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #212121;
+}
+
+/* Intro Content */
+
+#intro {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+    display: grid;
+    grid-area: intro;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "laurenPhoto aboutText aboutText";
+}
+
+#laurenPhoto {
+    grid-area: laurenPhoto;
+}
+
+#laurenPhoto img {
+    width: 362px;
+    height: auto;
+    margin-top: 20px;
+    margin-right: 60px;
+    padding-top: 15px;
+}
+
+#aboutText {
+    grid-area: aboutText;
+    margin-top: 0px;
+}
+
+#aboutText h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    line-height: 100%;
+}
+
+#aboutText p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    }
+
+p {
+font-family: 'Roboto', sans-serif;
+line-height: 140%;
+font-size: 16px;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #212121;
+    color:#FAFBF1;
+    border: none;
+    padding: 20px 30px 20px 30px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+button a {
+    text-decoration: none;
+    color:#FAFBF1;
+}
+
+#work {
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-top: 300px;
+}
+
+.sectionDivider {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 40px;
+    text-align: left;
+    border-bottom: solid 1px #212121;
+}
+
+/* Skills Content */
+
+#skills {
+    grid-area: skills;
+    margin-top: 80px;
+}
+
+#skillsContainer {
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas:
+    "ux ui feDev";
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#skills img {
+    width: 80px;
+    height: 80px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 110%;
+}
+
+#skillsContainer p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
+    font-size: 20px;
+    }
+
+#ux {
+    grid-area: ux;
+    margin-right: 20px;
+    padding-right: 40px;
+}
+
+#ui {
+    grid-area: ui;
+    margin-right: 20px;
+    padding-right: 40px;
+}    
+
+#feDev {
+    grid-area: feDev;
+    margin-right: 20px;
+    padding-right: 40px;
+}
+
+/* Work Content */
+
+.caseStudies123 {
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.card {
+margin-left: 80px;
+margin-right: 20px;
+}
+
+.card img {
+    width: 420px;
+    height: auto;
+}
+
+.cardText {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.card h2 {
+    grid-area: cardHeadline;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.card p {
+    grid-area: cardCopy;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+footer {
+    margin-bottom: 100px;
+}
