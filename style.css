@@ -95,7 +95,7 @@ nav img {
 
 #aboutText h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 56px;
+    font-size: 42px;
     line-height: 100%;
 }
 
@@ -127,13 +127,8 @@ button a {
     color:#FAFBF1;
 }
 
-#work {
-    margin-right: 80px;
-    margin-left: 80px;
-    margin-top: 300px;
-}
-
 .sectionDivider {
+    grid-area: sectionDivider;
     margin-left: 80px;
     margin-right: 80px;
     margin-bottom: 40px;
@@ -145,7 +140,6 @@ button a {
 
 #skills {
     grid-area: skills;
-    margin-top: 80px;
 }
 
 #skillsContainer {
@@ -153,8 +147,9 @@ button a {
     flex-direction: row; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100%;
+    grid-template-rows: 10 90%;
     grid-template-areas:
+    "sectionDivider sectionDivider sectionDivider"
     "ux ui feDev";
     margin-left: 80px;
     margin-right: 80px;
@@ -167,7 +162,7 @@ button a {
 
 h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 42px;
+    font-size: 32px;
     line-height: 110%;
 }
 
@@ -197,30 +192,67 @@ h2 {
 
 /* Work Content */
 
-.caseStudies123 {
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+#work {
+    grid-area: work;
+}
+
+#caseStudies {
+    margin-left: 80px;
+    margin-right: 80px;
+    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "naba skippr cs3"
+    "cs4 cs5 cs6";
 }
 
 .card {
-margin-left: 80px;
-margin-right: 20px;
+margin-bottom: 40px;
 }
 
-.card img {
+#work img {
     width: 420px;
     height: auto;
+    margin-top: 40px;
+    margin-bottom: 5px;
+
 }
 
 .cardText {
-    margin-top: 5px;
+    margin-bottom: 40px;
+    width: 420px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
 }
+
+#naba {
+    grid-area: naba;
+}
+
+#skippr {
+    grid-area: skippr;
+}
+
+#cs3 {
+    grid-area: cs3;
+}
+
+#cs4 {
+    grid-area: cs4;
+}
+
+#cs5 {
+    grid-area: cs5;
+}
+
+#cs6 {
+    grid-area: cs6;
+}
+
 
 .card h2 {
     grid-area: cardHeadline;
