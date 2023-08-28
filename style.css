@@ -291,54 +291,211 @@ footer {
     padding-top: 40px;
 }
 
+/* Media Breakpoints */
+
 @media only screen and (max-width: 1000px) {
 
 body {
+    width: 840px;
+    height: 100% vph;
+margin-top: 40px;
+margin-right: auto;
+margin-left: auto;
     display: grid;
-    grid-template-rows: 8% 15% 45% 45% 5%;
+    grid-template-rows: 3% 17% 1fr 1fr 5%;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "nav"
-    "intro"
-    "skills"
-    "work"
-    "footer";
+    "nav nav nav"
+    "intro intro intro"
+    "skills skills skills"
+    "work work work"
+    "footer footer footer";
 }
-    nav {
-      display: inline-block;
-      width: auto;
-      flex-direction: column;
-    }
-    nav img {
-        margin: auto,
 
+section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+p {
+font-family: 'Roboto', sans-serif;
+line-height: 130%;
+font-size: 28px;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    background-color: #212121;
+    border: none;
+    padding: 20px 30px 20px 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+button span{
+    display: inline-block;
+    vertical-align: middle;
+    color: #FAFBF1;
+}
+
+span img {
+    width: 30px;
+    height: 30px;
+    padding-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sectionDivider {
+    width: 830px;
+    grid-area: sectionDivider;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 40px;
+    text-align: left;
+    border-bottom: solid 1px #212121;
+}
+
+    nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "img img tabs";
     }
+
+    nav img {
+        grid-area: img;
+        width: 680px;
+        height: auto;
+    }
+
     .tabs {
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
+        grid-area: tabs;
+        text-align: right;
+        list-style: none;
+        display: inline;
+        flex-direction: column;
+        justify-content: flex-end;
+        border-bottom: solid 1px #212121;
+        padding-bottom: 20px;
+        margin-right: 20px;
     }
+
+    li {
+        padding: 5px;
+    }
+
+    #intro {
+        grid-area: intro;
+        margin-left: 80px;
+        margin-right: 80px;
+        /* margin-top: auto; */
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 35% 65%;
+        grid-template-areas: 
+        "laurenPhoto laurenPhoto"
+        "aboutText aboutText";
+    }
+    
+    #laurenPhoto {
+        grid-area: laurenPhoto;
+    }
+    
+    #laurenPhoto img {
+        width: 680px;
+        height: auto;
+        /* margin-right: 60px;
+        margin-top: 20px; */
+    }
+    
+    #aboutText {
+        grid-area: aboutText;
+        width: 840px;
+        margin-top: 20px;
+    }
+    
+    #aboutText h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 60px;
+        line-height: 100%;
+    }
+    
+    #aboutText p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+        line-height: 130%;
+        }
+
+    
+    #skills {
+            grid-area: skills;
+        }
+        
+    #skillsContainer {
+        /* display: flex;
+        flex-direction: column; */
+        width: 840px;
+        display: grid;
+        grid-template-rows: 10 30% 30% 30%;
+        grid-template-areas:
+        "sectionDivider"
+        "ux"
+        "ui"
+        "feDev";
+        }
+        
+        #skills img {
+            width: 120px;
+            height: 120px;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            line-height: 110%;
+        }
+        
+        #skillsContainer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+            line-height: 130%;
+            }
+        
+        #ux {
+            grid-area: ux;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            padding-right: 40px;
+        }
+        
+        #ui {
+            grid-area: ui;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            padding-right: 40px;
+        }    
+        
+        #feDev {
+            grid-area: feDev;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            padding-right: 40px;
+        }
+        
+        #skillsContainer span img {
+            width: 30px;
+            height: 30px;
+            padding-left: 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+
+        
   }
   
-  @media only screen and (max-width: 600px) {
-    #headline {
-      position: static;
-      margin: 20px;
-    }
-    #heroGrid {
-      grid-template-areas:
-      "featuredProduct featuredProduct"
-      "secondaryProduct CTA";
-    }
-    #categoryGrid {
-      grid-template-rows: 300px 300px 300px 300px 300px;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "bookcases"
-        "bedroom"
-        "patio"
-        "couches"
-        "desks"
-      ;
-    }
-  }
-  
+    
