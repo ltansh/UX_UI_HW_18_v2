@@ -34,18 +34,37 @@ button {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     background-color: #212121;
-    color:#FAFBF1;
     border: none;
     padding: 20px 30px 20px 30px;
-    margin-right: 0px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
-button a {
+button span{
+    display: inline-block;
+    vertical-align: middle;
+    color: #FAFBF1;
+}
+
+span img {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* button a {
     text-decoration: none;
     color:#FAFBF1;
-}
+} */
+
+/* button img {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+} */
 
 .sectionDivider {
     grid-area: sectionDivider;
@@ -143,14 +162,14 @@ nav img {
 }
 
 #skillsContainer {
-    /* display: flex;
-    flex-direction: row; */
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10 90%;
     grid-template-areas:
     "sectionDivider sectionDivider sectionDivider"
-    "ux ui feDev";
+    "ux ui feDev"; */
     margin-left: 80px;
     margin-right: 80px;
 }
@@ -190,6 +209,13 @@ h2 {
     padding-right: 40px;
 }
 
+#skillsContainer span img {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
 /* Work Content */
 
 #work {
@@ -215,9 +241,7 @@ margin-bottom: 40px;
 #work img {
     width: 420px;
     height: auto;
-    margin-top: 40px;
-    margin-bottom: 5px;
-
+    margin-top: 20px;
 }
 
 .cardText {
@@ -226,7 +250,7 @@ margin-bottom: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: center;
+    align-items: baseline;
 }
 
 #naba {
@@ -253,15 +277,12 @@ margin-bottom: 40px;
     grid-area: cs6;
 }
 
-
-.card h2 {
-    grid-area: cardHeadline;
-    font-family: 'Roboto', sans-serif;
+.card h3 {
+    font-family: 'Playfair Display', serif;
     font-size: 16px;
 }
 
 .card p {
-    grid-area: cardCopy;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
@@ -269,3 +290,55 @@ margin-bottom: 40px;
 footer {
     padding-top: 40px;
 }
+
+@media only screen and (max-width: 1000px) {
+
+body {
+    display: grid;
+    grid-template-rows: 8% 15% 45% 45% 5%;
+    grid-template-areas:
+    "nav"
+    "intro"
+    "skills"
+    "work"
+    "footer";
+}
+    nav {
+      display: inline-block;
+      width: auto;
+      flex-direction: column;
+    }
+    nav img {
+        margin: auto,
+
+    }
+    .tabs {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #headline {
+      position: static;
+      margin: 20px;
+    }
+    #heroGrid {
+      grid-template-areas:
+      "featuredProduct featuredProduct"
+      "secondaryProduct CTA";
+    }
+    #categoryGrid {
+      grid-template-rows: 300px 300px 300px 300px 300px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "bookcases"
+        "bedroom"
+        "patio"
+        "couches"
+        "desks"
+      ;
+    }
+  }
+  
