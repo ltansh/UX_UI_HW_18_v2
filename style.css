@@ -1,13 +1,13 @@
 body {
-    margin-left: 80px;
+    /* margin-left: 80px;
     margin-right: 80px;
     margin-top: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 100px; */
     background-color: #FAFBF1;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #212121;
-    display: grid;
+    /* font-size: 16px;
+    color: #212121; */
+    /* display: grid;
     grid-template-rows: 8% 15% 45% 45% 5%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -15,13 +15,14 @@ body {
     "intro intro intro"
     "skills skills skills"
     "work work work"
-    "footer footer footer";
-    margin: auto 0;
+    "footer footer footer"; */
+    /* margin: auto 0; */
 }
 
 section {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    /* margin-top: 40px;
+    margin-bottom: 40px; */
+    margin: 0px 5%;
 }
 
 p {
@@ -67,11 +68,12 @@ span img {
 } */
 
 .sectionDivider {
-    grid-area: sectionDivider;
-    margin-left: 80px;
-    margin-right: 80px;
+    /* grid-area: sectionDivider; */
+    /* margin: 0px 5%; */
+    /* margin-left: 80px;
+    margin-right: 80px; */
     margin-bottom: 40px;
-    text-align: left;
+    /* text-align: left; */
     border-bottom: solid 1px #212121;
 }
 
@@ -79,9 +81,7 @@ span img {
 
 nav {
     grid-area: nav;
-    margin-right: 80px;
-    margin-left: 80px;
-    margin-bottom: 60px;
+    margin: 0px 5%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -97,6 +97,7 @@ nav img {
     border-bottom: solid 1px #212121;
     padding-bottom: 20px;
     margin-right: 60px;
+    margin-top: 40px;
 }
 
 .tabs {
@@ -107,7 +108,7 @@ nav img {
     justify-content: space-between;
     border-bottom: solid 1px #212121;
     padding-bottom: 20px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 .tabs a {
@@ -118,9 +119,10 @@ nav img {
 /* Intro Content */
 
 #intro {
-    margin-left: 80px;
+    /* margin-left: 80px;
     margin-right: 80px;
-    margin-top: auto;
+    margin-top: auto; */
+    /* margin: 0px 5%; */
     display: grid;
     grid-area: intro;
     grid-template-columns: 1fr 1fr 1fr;
@@ -136,12 +138,14 @@ nav img {
     width: 362px;
     height: auto;
     margin-right: 60px;
-    margin-top: 40px;
+    margin-top: 60px;
+    background-image: url(/images/LaurenPhoneBW.jpeg);
 }
 
 #aboutText {
     grid-area: aboutText;
-    margin: auto 0;
+    margin-top: 20px;
+    /* margin: auto 0; */
 }
 
 #aboutText h1 {
@@ -157,9 +161,9 @@ nav img {
 
 /* Skills Content */
 
-#skills {
+/* #skills {
     grid-area: skills;
-}
+} */
 
 #skillsContainer {
     display: flex;
@@ -170,8 +174,8 @@ nav img {
     grid-template-areas:
     "sectionDivider sectionDivider sectionDivider"
     "ux ui feDev"; */
-    margin-left: 80px;
-    margin-right: 80px;
+    /* margin-left: 80px;
+    margin-right: 80px; */
 }
 
 #skills img {
@@ -223,25 +227,29 @@ h2 {
 }
 
 #caseStudies {
-    margin-left: 80px;
-    margin-right: 80px;
-    justify-content: space-between;
+    /* margin-left: 80px;
+    margin-right: 80px; */
+    /* justify-content: space-between; */
     display: grid;
-    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "naba skippr cs3"
     "cs4 cs5 cs6";
 }
 
-.card {
-margin-bottom: 40px;
+.cardContainer {
+    /* width: 420px; */
+    margin-bottom: 40px;
+    
+    /* justify-content: space-between; */
 }
 
-#work img {
+.cardContainer img {
     width: 420px;
     height: auto;
     margin-top: 20px;
+    background-image: url(/images/Image_placeholder.png);
 }
 
 .cardText {
@@ -277,12 +285,12 @@ margin-bottom: 40px;
     grid-area: cs6;
 }
 
-.card h3 {
+.cardText h3 {
     font-family: 'Playfair Display', serif;
     font-size: 16px;
 }
 
-.card p {
+.cardText p {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
@@ -291,18 +299,20 @@ footer {
     padding-top: 40px;
 }
 
+
+
 /* Media Breakpoints */
 
 @media only screen and (max-width: 1000px) {
 
 body {
-    width: 840px;
+    width: 320px;
     height: 100% vph;
 margin-top: 40px;
 margin-right: auto;
 margin-left: auto;
     display: grid;
-    grid-template-rows: 3% 17% 1fr 1fr 5%;
+    grid-template-rows: 2% 17% 1fr 1fr 5%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "nav nav nav"
@@ -349,11 +359,11 @@ span img {
 }
 
 .sectionDivider {
-    width: 830px;
+    width: 320px;
     grid-area: sectionDivider;
-    margin-left: 80px;
+    /* margin-left: 80px;
     margin-right: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 40px; */
     text-align: left;
     border-bottom: solid 1px #212121;
 }
@@ -368,7 +378,7 @@ span img {
 
     nav img {
         grid-area: img;
-        width: 680px;
+        width: 320px;
         height: auto;
     }
 
@@ -385,14 +395,14 @@ span img {
     }
 
     li {
-        padding: 5px;
+        padding: 0px;
     }
 
     #intro {
         grid-area: intro;
-        margin-left: 80px;
-        margin-right: 80px;
-        /* margin-top: auto; */
+        /* margin-left: 80px;
+        margin-right: 80px; */
+        margin-top: auto;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 35% 65%;
@@ -406,7 +416,7 @@ span img {
     }
     
     #laurenPhoto img {
-        width: 680px;
+        width: 460px;
         height: auto;
         /* margin-right: 60px;
         margin-top: 20px; */
@@ -440,7 +450,7 @@ span img {
         flex-direction: column; */
         width: 840px;
         display: grid;
-        grid-template-rows: 10 30% 30% 30%;
+        grid-template-rows: 10% 30% 30% 30%;
         grid-template-areas:
         "sectionDivider"
         "ux"
@@ -492,6 +502,32 @@ span img {
             padding-left: 5px;
             display: inline-block;
             vertical-align: middle;
+        }
+
+        #work {
+            grid-area: work;
+        }
+        
+        #caseStudies {
+            /* margin-left: 80px;
+            margin-right: 80px; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+        margin-bottom: 40px;
+        }
+        
+        #work img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+        
+        .cardText {
+            display: flex;
+            flex-direction: column;
         }
 
 
