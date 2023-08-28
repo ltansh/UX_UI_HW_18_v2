@@ -1,22 +1,7 @@
 body {
-    /* margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 80px;
-    margin-bottom: 100px; */
     background-color: #FAFBF1;
     font-family: 'Roboto', sans-serif;
-    /* font-size: 16px;
-    color: #212121; */
-    /* display: grid;
-    grid-template-rows: 8% 15% 45% 45% 5%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "nav nav nav"
-    "intro intro intro"
-    "skills skills skills"
-    "work work work"
-    "footer footer footer"; */
-    /* margin: auto 0; */
+
 }
 
 section {
@@ -24,6 +9,33 @@ section {
     margin-bottom: 40px; */
     margin: 0px 5%;
 }
+
+.fixedButton{
+    position: fixed;
+    bottom: 0px;
+    right: 20px; 
+    padding: 40px;
+}
+.roundedFixedBtn{
+  height: 88px;
+  line-height: 80px;  
+  width: 88px;  
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #9747FF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.roundedFixedBtn img {
+    width: 32px;
+    height: 32px;
+}
+
 
 p {
 font-family: 'Roboto', sans-serif;
@@ -92,7 +104,7 @@ nav {
 
 nav img {
     grid-area: img;
-    width: 362px;
+    max-width: 100%;
     height: auto;
     border-bottom: solid 1px #212121;
     padding-bottom: 20px;
@@ -135,7 +147,7 @@ nav img {
 }
 
 #laurenPhoto img {
-    width: 362px;
+    max-width: 100%;
     height: auto;
     margin-right: 60px;
     margin-top: 60px;
@@ -241,12 +253,10 @@ h2 {
 .cardContainer {
     /* width: 420px; */
     margin-bottom: 40px;
-    
-    /* justify-content: space-between; */
 }
 
 .cardContainer img {
-    width: 420px;
+    width: 400px;
     height: auto;
     margin-top: 20px;
     background-image: url(/images/Image_placeholder.png);
@@ -254,7 +264,7 @@ h2 {
 
 .cardText {
     margin-bottom: 40px;
-    width: 420px;
+    width: 400px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -295,243 +305,92 @@ h2 {
     font-size: 14px;
 }
 
-footer {
-    padding-top: 40px;
+footer .sectionDivider {
+    margin: 0px 5%;
+    margin-bottom: 80px;
+    border-bottom: solid 1px #212121;
 }
-
-
 
 /* Media Breakpoints */
 
 @media only screen and (max-width: 1000px) {
 
-body {
-    width: 320px;
-    height: 100% vph;
-margin-top: 40px;
-margin-right: auto;
-margin-left: auto;
-    display: grid;
-    grid-template-rows: 2% 17% 1fr 1fr 5%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "nav nav nav"
-    "intro intro intro"
-    "skills skills skills"
-    "work work work"
-    "footer footer footer";
-}
+    #skillsContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "ux"
+        "ui"
+        "feDev";
+    }
 
-section {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    #caseStudies {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "naba skippr"
+        "cs3 cs4"
+        "cs5 cs6";
+    }
+    .cardContainer img {
+        width: 70%;
+        height: auto;
+        margin-top: 10px;
+    }
+    .cardText {
+        margin-bottom: 0px;
+        max-width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
 }
+@media only screen and (max-width: 600px) {
 
-p {
-font-family: 'Roboto', sans-serif;
-line-height: 130%;
-font-size: 28px;
-}
-
-button {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    background-color: #212121;
-    border: none;
-    padding: 20px 30px 20px 30px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    cursor: pointer;
-}
-
-button span{
-    display: inline-block;
-    vertical-align: middle;
-    color: #FAFBF1;
-}
-
-span img {
-    width: 30px;
-    height: 30px;
-    padding-left: 5px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.sectionDivider {
-    width: 320px;
-    grid-area: sectionDivider;
-    /* margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 40px; */
-    text-align: left;
-    border-bottom: solid 1px #212121;
-}
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2.5% 1fr 1fr 1fr 5%;
+        grid-template-areas:
+        "nav"
+        "intro"
+        "skills"
+        "work"
+        "footer";
+    }
 
     nav {
-    grid-area: nav;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "img img tabs";
-    }
-
-    nav img {
-        grid-area: img;
-        width: 320px;
-        height: auto;
-    }
-
-    .tabs {
-        grid-area: tabs;
-        text-align: right;
-        list-style: none;
-        display: inline;
-        flex-direction: column;
-        justify-content: flex-end;
-        border-bottom: solid 1px #212121;
-        padding-bottom: 20px;
-        margin-right: 20px;
-    }
-
-    li {
-        padding: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "img"
+        "tabs";
     }
 
     #intro {
         grid-area: intro;
-        /* margin-left: 80px;
-        margin-right: 80px; */
-        margin-top: auto;
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 35% 65%;
-        grid-template-areas: 
-        "laurenPhoto laurenPhoto"
-        "aboutText aboutText";
-    }
-    
-    #laurenPhoto {
-        grid-area: laurenPhoto;
-    }
-    
-    #laurenPhoto img {
-        width: 460px;
-        height: auto;
-        /* margin-right: 60px;
-        margin-top: 20px; */
-    }
-    
-    #aboutText {
-        grid-area: aboutText;
-        width: 840px;
-        margin-top: 20px;
-    }
-    
-    #aboutText h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 60px;
-        line-height: 100%;
-    }
-    
-    #aboutText p {
-        font-family: 'Roboto', sans-serif;
-        font-size: 40px;
-        line-height: 130%;
-        }
-
-    
-    #skills {
-            grid-area: skills;
-        }
-        
-    #skillsContainer {
-        /* display: flex;
-        flex-direction: column; */
-        width: 840px;
-        display: grid;
-        grid-template-rows: 10% 30% 30% 30%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-areas:
-        "sectionDivider"
-        "ux"
-        "ui"
-        "feDev";
-        }
-        
-        #skills img {
-            width: 120px;
-            height: 120px;
-        }
-        
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 60px;
-            line-height: 110%;
-        }
-        
-        #skillsContainer p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 40px;
-            line-height: 130%;
-            }
-        
-        #ux {
-            grid-area: ux;
-            margin-right: 20px;
-            margin-bottom: 40px;
-            padding-right: 40px;
-        }
-        
-        #ui {
-            grid-area: ui;
-            margin-right: 20px;
-            margin-bottom: 40px;
-            padding-right: 40px;
-        }    
-        
-        #feDev {
-            grid-area: feDev;
-            margin-right: 20px;
-            margin-bottom: 40px;
-            padding-right: 40px;
-        }
-        
-        #skillsContainer span img {
-            width: 30px;
-            height: 30px;
-            padding-left: 5px;
-            display: inline-block;
-            vertical-align: middle;
-        }
+        "laurenPhoto"
+        "aboutText";
+    }
 
-        #work {
-            grid-area: work;
-        }
-        
-        #caseStudies {
-            /* margin-left: 80px;
-            margin-right: 80px; */
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .card {
-        margin-bottom: 40px;
-        }
-        
-        #work img {
-            width: 300px;
-            height: auto;
-            margin-top: 20px;
-        }
-        
-        .cardText {
-            display: flex;
-            flex-direction: column;
-        }
-
-
-        
-  }
-  
-    
+    #caseStudies {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "naba"
+        "skippr"
+        "cs3"
+        "cs4"
+        "cs5"
+        "cs6";
+    }
+}
