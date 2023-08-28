@@ -1,13 +1,13 @@
 body {
     background-color: #FAFBF1;
     font-family: 'Roboto', sans-serif;
-
 }
 
 section {
     /* margin-top: 40px;
     margin-bottom: 40px; */
     margin: 0px 5%;
+    align-content: center;
 }
 
 .fixedButton{
@@ -35,7 +35,6 @@ section {
     width: 32px;
     height: 32px;
 }
-
 
 p {
 font-family: 'Roboto', sans-serif;
@@ -80,12 +79,9 @@ span img {
 } */
 
 .sectionDivider {
-    /* grid-area: sectionDivider; */
-    /* margin: 0px 5%; */
-    /* margin-left: 80px;
-    margin-right: 80px; */
+    grid-area: sectionDivider;
+    margin-top: 60px;
     margin-bottom: 40px;
-    /* text-align: left; */
     border-bottom: solid 1px #212121;
 }
 
@@ -99,12 +95,14 @@ nav {
     grid-template-areas: 
     "img tabs tabs";
     align-items: flex-end;
-    justify-content: space-between;
+    gap: 40px;    
 }
 
 nav img {
     grid-area: img;
     max-width: 100%;
+    object-fit: cover;
+    object-position: bottom;
     height: auto;
     border-bottom: solid 1px #212121;
     padding-bottom: 20px;
@@ -140,6 +138,7 @@ nav img {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "laurenPhoto aboutText aboutText";
+    gap: 40px;
 }
 
 #laurenPhoto {
@@ -180,14 +179,11 @@ nav img {
 #skillsContainer {
     display: flex;
     flex-direction: row;
-    /* display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10 90%;
     grid-template-areas:
-    "sectionDivider sectionDivider sectionDivider"
-    "ux ui feDev"; */
-    /* margin-left: 80px;
-    margin-right: 80px; */
+    "ux ui feDev";
+    gap: 40px;
 }
 
 #skills img {
@@ -209,20 +205,17 @@ h2 {
 
 #ux {
     grid-area: ux;
-    margin-right: 20px;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 #ui {
     grid-area: ui;
-    margin-right: 20px;
-    padding-right: 40px;
+    padding-right: 20px;
 }    
 
 #feDev {
     grid-area: feDev;
-    margin-right: 20px;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 #skillsContainer span img {
@@ -236,18 +229,18 @@ h2 {
 
 #work {
     grid-area: work;
+    display: flex;
+    flex-direction: column;
 }
 
 #caseStudies {
-    /* margin-left: 80px;
-    margin-right: 80px; */
-    /* justify-content: space-between; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "naba skippr cs3"
     "cs4 cs5 cs6";
+    gap: 40px;
 }
 
 .cardContainer {
@@ -256,10 +249,11 @@ h2 {
 }
 
 .cardContainer img {
-    width: 400px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: bottom;
     height: auto;
     margin-top: 20px;
-    background-image: url(/images/Image_placeholder.png);
 }
 
 .cardText {
@@ -313,7 +307,7 @@ footer .sectionDivider {
 
 /* Media Breakpoints */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
 
     #skillsContainer {
         display: grid;
@@ -328,20 +322,21 @@ footer .sectionDivider {
     #caseStudies {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
         "naba skippr"
         "cs3 cs4"
         "cs5 cs6";
     }
     .cardContainer img {
-        width: 70%;
+        /* min-width: auto; */
+        max-width: 80%;
         height: auto;
         margin-top: 10px;
     }
     .cardText {
         margin-bottom: 0px;
-        max-width: 70%;
+        max-width: 80%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -394,3 +389,27 @@ footer .sectionDivider {
         "cs6";
     }
 }
+
+    @media only screen and (max-width: 480px) {
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #intro {
+            grid-area: intro;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #caseStudies {
+            display: flex;
+            flex-direction: column;
+        }
+    }
