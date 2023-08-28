@@ -67,6 +67,17 @@ span img {
     vertical-align: middle;
 }
 
+/* button a {
+    text-decoration: none;
+    color:#FAFBF1;
+} */
+
+/* button img {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+} */
+
 .sectionDivider {
     grid-area: sectionDivider;
     margin-top: 60px;
@@ -118,6 +129,7 @@ nav img {
 /* Intro Content */
 
 #intro {
+
     display: grid;
     grid-area: intro;
     grid-template-columns: 1fr 1fr 1fr;
@@ -157,9 +169,9 @@ nav img {
 
 /* Skills Content */
 
-#skills {
+/* #skills {
     grid-area: skills;
-}
+} */
 
 #skillsContainer {
     display: flex;
@@ -229,6 +241,7 @@ h2 {
 }
 
 .cardContainer {
+    /* width: 420px; */
     margin-bottom: 40px;
 }
 
