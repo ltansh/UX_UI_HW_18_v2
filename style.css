@@ -242,12 +242,12 @@ h2 {
     gap: 40px;
 }
 
-/* .cardContainer {
+/* .card {
     width: 420px;
     margin-bottom: 40px;
 } */
 
-#caseStudies img {
+.card img {
     margin-top: 20px;
     max-width: 100%;
     height: auto;
@@ -328,7 +328,7 @@ footer .sectionDivider {
         "cs3 cs4"
         "cs5 cs6";
     }
-    .cardContainer img {
+    .card img {
         /* min-width: auto; */
         max-width: 80%;
         height: auto;
