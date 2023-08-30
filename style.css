@@ -1,6 +1,7 @@
 body {
     background-color: #FAFBF1;
     font-family: 'Roboto', sans-serif;
+    width: 100vw;
 }
 
 section {
@@ -101,8 +102,6 @@ nav {
 nav img {
     grid-area: img;
     max-width: 100%;
-    object-fit: cover;
-    object-position: bottom;
     height: auto;
     border-bottom: solid 1px #212121;
     padding-bottom: 20px;
@@ -118,7 +117,6 @@ nav img {
     justify-content: space-between;
     border-bottom: solid 1px #212121;
     padding-bottom: 20px;
-    /* margin-right: 20px; */
 }
 
 .tabs a {
@@ -233,7 +231,7 @@ h2 {
 }
 
 #caseStudies {
-    display: grid;
+    display: grid; 
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
@@ -242,13 +240,16 @@ h2 {
     gap: 40px;
 }
 
-/* .card {
-    width: 420px;
-    margin-bottom: 40px;
-} */
+.card {
+    /* width: 420px;
+    margin-bottom: 40px; */
+    display: flex;
+    flex-direction: column;
+}
 
 .card img {
     margin-top: 20px;
+    /* width: auto; */
     max-width: 100%;
     height: auto;
     /* object-fit: cover;
@@ -256,7 +257,7 @@ h2 {
 }
 
 .cardText {
-    width: 410px;
+    /* width: 100%; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -307,16 +308,53 @@ footer .sectionDivider {
 
 /* Media Breakpoints */
 
+@media only screen and (max-width: 1030px) {
+
+    body {
+        margin: 0 auto;
+    }
+
+    #laurenPhoto img {
+        margin-top: 50px;
+    }
+
+    #aboutText h1 {
+        font-size: 32px;
+    }
+}
 @media only screen and (max-width: 800px) {
 
-    #skillsContainer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-        "ux"
-        "ui"
-        "feDev";
+    nav {
+        margin-right: auto;
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    nav img {
+        width: auto;
+    }
+
+    .tabs {
+        margin-left: 0px;
+        width: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .tabs a {
+        padding-right: 15px;
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #aboutText {
+        margin-top: 0px;
     }
 
     #caseStudies {
@@ -328,82 +366,42 @@ footer .sectionDivider {
         "cs3 cs4"
         "cs5 cs6";
     }
-    .card img {
-        /* min-width: auto; */
-        max-width: 80%;
-        height: auto;
-        margin-top: 10px;
-    }
-    .cardText {
-        margin-bottom: 0px;
-        max-width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-    }
-}
-@media only screen and (max-width: 600px) {
-
-    body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2.5% 1fr 1fr 1fr 5%;
-        grid-template-areas:
-        "nav"
-        "intro"
-        "skills"
-        "work"
-        "footer";
-    }
-
-    nav {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-        "img"
-        "tabs";
-    }
-
-    #intro {
-        grid-area: intro;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-        "laurenPhoto"
-        "aboutText";
-    }
-
-    #caseStudies {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "naba"
-        "skippr"
-        "cs3"
-        "cs4"
-        "cs5"
-        "cs6";
-    }
 }
 
     @media only screen and (max-width: 480px) {
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
     
         nav {
+            margin-right: auto;
+            margin-left: 25px;
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        nav img {
+            width: 70%;
+        }
+
+        .tabs {
+            margin-left: 0px;
+            width: auto;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .tabs a {
+            padding-right: 15px;
         }
     
         #intro {
             grid-area: intro;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #skillsContainer {
             display: flex;
             flex-direction: column;
         }
@@ -411,5 +409,11 @@ footer .sectionDivider {
         #caseStudies {
             display: flex;
             flex-direction: column;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+        .tabs a {
+            padding-right: 12px;
         }
     }
