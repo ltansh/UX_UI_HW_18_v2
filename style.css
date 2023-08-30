@@ -1,29 +1,29 @@
 body {
-    background-color: #FAFBF1;
-    font-family: 'Roboto', sans-serif;
+  background-color: #fafbf1;
+  font-family: "Roboto", sans-serif;
 }
 
 section {
-    /* margin-top: 40px;
+  /* margin-top: 40px;
     margin-bottom: 40px; */
-    margin: 0px 5%;
-    align-content: center;
+  margin: 0px 5%;
+  align-content: center;
 }
 
-.fixedButton{
-    position: fixed;
-    bottom: 0px;
-    right: 20px; 
-    padding: 40px;
+.fixedButton {
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  padding: 40px;
 }
-.roundedFixedBtn{
+.roundedFixedBtn {
   height: 88px;
-  line-height: 80px;  
-  width: 88px;  
+  line-height: 80px;
+  width: 88px;
   font-size: 2em;
   font-weight: bold;
   border-radius: 50%;
-  background-color: #9747FF;
+  background-color: #9747ff;
   color: white;
   display: flex;
   justify-content: center;
@@ -32,39 +32,39 @@ section {
 }
 
 .roundedFixedBtn img {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 p {
-font-family: 'Roboto', sans-serif;
-line-height: 140%;
-font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  line-height: 140%;
+  font-size: 16px;
 }
 
 button {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    background-color: #212121;
-    border: none;
-    padding: 20px 30px 20px 30px;
-    margin-top: 40px;
-    margin-bottom: 50px;
-    cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #212121;
+  border: none;
+  padding: 20px 30px 20px 30px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  cursor: pointer;
 }
 
-button span{
-    display: inline-block;
-    vertical-align: middle;
-    color: #FAFBF1;
+button span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fafbf1;
 }
 
 span img {
-    width: 25px;
-    height: 25px;
-    padding-left: 5px;
-    display: inline-block;
-    vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  padding-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* button a {
@@ -79,167 +79,163 @@ span img {
 } */
 
 .sectionDivider {
-    grid-area: sectionDivider;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    border-bottom: solid 1px #212121;
+  grid-area: sectionDivider;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  border-bottom: solid 1px #212121;
 }
 
 /* Navigation Bar Content */
 
 nav {
-    grid-area: nav;
-    margin: 0px 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "img tabs tabs";
-    align-items: flex-end;
-    gap: 40px;    
+  grid-area: nav;
+  margin: 0px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "img tabs tabs";
+  align-items: flex-end;
+  gap: 40px;
 }
 
 nav img {
-    grid-area: img;
-    max-width: 100%;
-    object-fit: cover;
-    object-position: bottom;
-    height: auto;
-    border-bottom: solid 1px #212121;
-    padding-bottom: 20px;
-    margin-right: 60px;
-    margin-top: 40px;
+  grid-area: img;
+  max-width: 100%;
+  /* object-fit: cover; */
+  /* object-position: bottom; */
+  height: auto;
+  border-bottom: solid 1px #212121;
+  padding-bottom: 20px;
+  /* margin-right: 60px; */
+  margin-top: 40px;
 }
 
 .tabs {
-    grid-area: tabs;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: solid 1px #212121;
-    padding-bottom: 20px;
-    /* margin-right: 20px; */
+  grid-area: tabs;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid 1px #212121;
+  padding-bottom: 20px;
+  /* margin-right: 20px; */
 }
 
 .tabs a {
-    text-decoration: none;
-    color: #212121;
+  text-decoration: none;
+  color: #212121;
 }
 
 /* Intro Content */
 
 #intro {
-
-    display: grid;
-    grid-area: intro;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "laurenPhoto aboutText aboutText";
-    gap: 40px;
+  display: grid;
+  grid-area: intro;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "laurenPhoto aboutText aboutText";
+  gap: 40px;
 }
 
 #laurenPhoto {
-    grid-area: laurenPhoto;
+  grid-area: laurenPhoto;
 }
 
 #laurenPhoto img {
-    max-width: 100%;
-    height: auto;
-    margin-right: 60px;
-    margin-top: 60px;
-    background-image: url(/images/LaurenPhoneBW.jpeg);
+  max-width: 100%;
+  height: auto;
+  margin-right: 60px;
+  margin-top: 60px;
+  background-image: url(/images/LaurenPhoneBW.jpeg);
 }
 
 #aboutText {
-    grid-area: aboutText;
-    margin-top: 20px;
-    /* margin: auto 0; */
+  grid-area: aboutText;
+  margin-top: 20px;
+  /* margin: auto 0; */
 }
 
 #aboutText h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    line-height: 100%;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  line-height: 100%;
 }
 
 #aboutText p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    }
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
 
 /* Skills Content */
 
 #skills {
-    grid-area: skills;
+  grid-area: skills;
 }
 
 #skillsContainer {
-    display: flex;
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "ux ui feDev";
-    gap: 40px;
+  display: flex;
+  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "ux ui feDev";
+  gap: 40px;
 }
 
 #skills img {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    line-height: 110%;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  line-height: 110%;
 }
 
 #skillsContainer p {
-    font-family: 'Roboto', sans-serif;
-    line-height: 150%;
-    font-size: 20px;
-    }
+  font-family: "Roboto", sans-serif;
+  line-height: 150%;
+  font-size: 20px;
+}
 
 #ux {
-    grid-area: ux;
-    padding-right: 20px;
+  grid-area: ux;
+  padding-right: 20px;
 }
 
 #ui {
-    grid-area: ui;
-    padding-right: 20px;
-}    
+  grid-area: ui;
+  padding-right: 20px;
+}
 
 #feDev {
-    grid-area: feDev;
-    padding-right: 20px;
+  grid-area: feDev;
+  padding-right: 20px;
 }
 
 #skillsContainer span img {
-    width: 25px;
-    height: 25px;
-    padding-left: 5px;
-    display: inline-block;
-    vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  padding-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Work Content */
 
 #work {
-    grid-area: work;
-    margin-bottom: 60px;
-    /* display: flex;
+  grid-area: work;
+  margin-bottom: 60px;
+  /* display: flex;
     flex-direction: column; */
 }
 
 #caseStudies {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
     "naba skippr cs3"
     "cs4 cs5 cs6";
-    gap: 40px;
+  gap: 40px;
 }
 
 /* .card {
@@ -248,168 +244,164 @@ h2 {
 } */
 
 .card img {
-    margin-top: 20px;
-    max-width: 100%;
-    height: auto;
-    /* object-fit: cover;
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+  /* object-fit: cover;
     object-position: bottom; */
 }
 
 .cardText {
-    width: 410px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 #naba {
-    grid-area: naba;
+  grid-area: naba;
 }
 
 #skippr {
-    grid-area: skippr;
+  grid-area: skippr;
 }
 
 #cs3 {
-    grid-area: cs3;
+  grid-area: cs3;
 }
 
 #cs4 {
-    grid-area: cs4;
+  grid-area: cs4;
 }
 
 #cs5 {
-    grid-area: cs5;
+  grid-area: cs5;
 }
 
 #cs6 {
-    grid-area: cs6;
+  grid-area: cs6;
 }
 
 .cardText h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
 }
 
 .cardText p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 
 /* Footer Content */
 
 footer .sectionDivider {
-    margin: 0px 5%;
-    margin-bottom: 80px;
-    border-bottom: solid 1px #212121;
+  margin: 0px 5%;
+  margin-bottom: 80px;
+  border-bottom: solid 1px #212121;
 }
 
 /* Media Breakpoints */
 
 @media only screen and (max-width: 800px) {
+  #skillsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "ux"
+      "ui"
+      "feDev";
+  }
 
-    #skillsContainer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-        "ux"
-        "ui"
-        "feDev";
-    }
-
-    #caseStudies {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "naba skippr"
-        "cs3 cs4"
-        "cs5 cs6";
-    }
-    .card img {
-        /* min-width: auto; */
-        max-width: 80%;
-        height: auto;
-        margin-top: 10px;
-    }
-    .cardText {
-        margin-bottom: 0px;
-        max-width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-    }
+  #caseStudies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "naba skippr"
+      "cs3 cs4"
+      "cs5 cs6";
+  }
+  .card img {
+    /* min-width: auto; */
+    max-width: 80%;
+    height: auto;
+    margin-top: 10px;
+  }
+  .cardText {
+    margin-bottom: 0px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 @media only screen and (max-width: 600px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.5% 1fr 1fr 1fr 5%;
+    grid-template-areas:
+      "nav"
+      "intro"
+      "skills"
+      "work"
+      "footer";
+  }
 
-    body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2.5% 1fr 1fr 1fr 5%;
-        grid-template-areas:
-        "nav"
-        "intro"
-        "skills"
-        "work"
-        "footer";
-    }
+  nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "img"
+      "tabs";
+  }
 
-    nav {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-        "img"
-        "tabs";
-    }
+  #intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "laurenPhoto"
+      "aboutText";
+  }
 
-    #intro {
-        grid-area: intro;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-        "laurenPhoto"
-        "aboutText";
-    }
-
-    #caseStudies {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "naba"
-        "skippr"
-        "cs3"
-        "cs4"
-        "cs5"
-        "cs6";
-    }
+  #caseStudies {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "naba"
+      "skippr"
+      "cs3"
+      "cs4"
+      "cs5"
+      "cs6";
+  }
 }
 
-    @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
 
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-    
-        nav {
-            display: flex;
-            flex-direction: column;
-        }
-    
-        #intro {
-            grid-area: intro;
-            display: flex;
-            flex-direction: column;
-        }
-    
-        #caseStudies {
-            display: flex;
-            flex-direction: column;
-        }
-    }
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #caseStudies {
+    display: flex;
+    flex-direction: column;
+  }
+}
